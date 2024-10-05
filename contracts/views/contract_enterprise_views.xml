@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="contract_enterprise_tree_view" model="ir.ui.view">
+            <field name="name">contract.enterprise.tree.view</field>
+            <field name="model">contract.enterprise</field>
+            <field name="arch" type="xml">
+                <tree string="Contracts">
+                    <field name="name" />
+                    <field name="start_date" />
+                    <field name="end_date" />
+                    <field name="type_contract" />
+                    <field name="sign_date" />
+                    <field name="salary_level" />
+                    <field name="effective_salary" />
+                    <field name="status" />
+                    <field name="employee_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="contract_enterprise_form_view" model="ir.ui.view">
+            <field name="name">contract.enterprise.form.view</field>
+            <field name="model">contract.enterprise</field>
+            <field name="arch" type="xml">
+                <form string="Contracts">
+                    <sheet style="display:flex">
+                        <div style="display:flex; justify-content: space-between; align-items: flex-start;">
+                            <div style="flex: 1;">
+                                <group col="3">
+                                    <field name="name" />
+                                    <field name="start_date" />
+                                    <field name="end_date" />
+                                    <field name="type_contract" />
+                                    <field name="sign_date" />
+                                    <field name="salary_level" />
+                                    <field name="effective_salary" />
+                                    <field name="employee_id" />
+<!--                                    <field name="role_name" string="Role Name"/>-->
+<!--                                    <field name="level_name" string="Level Name"/>-->
+<!--                                    <field name="job_name" string="Job Name"/>-->
+                                </group>
+                            </div>
+                            <div style="flex: 1; text-align: right;">
+                                <group>
+                                    <field name="status"/>
+                                </group>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="contract_enterprise_action" model="ir.actions.act_window">
+            <field name="name">Contracts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contract.enterprise</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="contract_enterprise_tree_view"/>
+        </record>
+
+        <record id="contract_enterprise_search_view" model="ir.ui.view">
+            <field name="name">contract.enterprise.search</field>
+            <field name="model">contract.enterprise</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter string="Running Contracts" name="running_contracts" domain="[('status', '=', 'running')]" />
+                    <!-- domain : xác định điều kiện filter -->
+                    <filter string="High Salary Contracts" name="high_salary_contracts" domain="[('total_salary', '>', 20000000)]" />
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="status" context="{'group_by': 'status'}" />
+                        <!-- context : xác định khi filter được kích hoạt, dữ liệu sẽ được group theo value -->
+                    </group>
+                    <group expand="0" string="Group By">
+                        <filter string="Type Contract" name="type_contract" context="{'group_by': 'type_contract'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+
+        <menuitem id="contract_enterprise_menu" name="Contracts" />
+        <menuitem id="contract_enterprise_menu_1" name="Contracts" parent="contract_enterprise_menu" action="contract_enterprise_action"/>
+    </data>
+</odoo>

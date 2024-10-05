@@ -1,0 +1,7 @@
+id,display_name,manager_id,total_employee,parent_id
+6,NES,"(1, 'Administrator')",0,False
+3,SDC1,"(2, 'Phạm Tiến Tâm')",2,False
+4,SDC3,"(4, 'Khuất Hữu Đạt')",2,False
+7,SDC6,"(1, 'Administrator')",0,False
+5,SDC8,"(1, 'Administrator')",0,False
+2,Sales,"(1, 'Administrator')",1,False

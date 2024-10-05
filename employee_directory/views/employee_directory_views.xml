@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="custom_template_id" name="Custom Template">
+            <t t-call-assets="web.assets_common" />
+            <link rel="stylesheet" href="/addons_custom/static/src/css/custom_styles.css"/>
+        </template>
+        <record id="employee_directory_tree_view" model="ir.ui.view">
+            <field name="name">employee.directory.tree.view</field>
+            <field name="model">employee.directory</field>
+            <field name="arch" type="xml">
+                <tree string="Employees">
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="address" />
+                    <field name="email" />
+                    <field name="phone" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="employee_directory_form_view" model="ir.ui.view">
+            <field name="name">employee.directory.form.view</field>
+            <field name="model">employee.directory</field>
+            <field name="arch" type="xml">
+                <form string="Employees">
+                    <sheet>
+                        <div style="display:flex; justify-content: space-between; align-items: flex-start;">
+                            <div style="flex: 1;">
+                                <group>
+                                    <field name="name" />
+                                    <field name="age" />
+                                    <field name="address" />
+                                    <field name="email" />
+                                    <field name="phone" />
+                                </group>
+                            </div>
+                            <div style="flex: 1; text-align: right;">
+                                <div class="oe_button_box" name="button_box">
+                                    <button name="action_open_contracts" type="object" class="oe_stat_button custom_button_style" icon="fa-book">
+                                        <span class="o_start_info" >
+                                            <field name="contract_count" class="o_start_value" />
+                                            <span class="o_start_text">Contracts</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_directory_action" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.directory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="employee_directory_tree_view"/>
+        </record>
+
+
+        <menuitem id="employee_directory_menu" name="Employees Director" />
+        <menuitem id="employee_directory_menu_1" name="Employees Director" parent="employee_directory_menu" action="employee_directory_action"/>
+    </data>
+</odoo>

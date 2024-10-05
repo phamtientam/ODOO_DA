@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="role_tree_view" model="ir.ui.view">
+            <field name="name">role.tree.view</field>
+            <field name="model">role</field>
+            <field name="arch" type="xml">
+                <tree string="Role">
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="role_form_view" model="ir.ui.view">
+            <field name="name">role.form.view</field>
+            <field name="model">role</field>
+            <field name="arch" type="xml">
+                <form string="Role">
+                    <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="role_action" model="ir.actions.act_window">
+            <field name="name">Role</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">role</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="role_tree_view"/>
+        </record>
+
+        <menuitem id="role_menu" name="Role" />
+        <menuitem id="role_menu_1" name="Role" parent="role_menu" action="role_action"/>
+
+
+<!--        JOB  -->
+        <record id="job_tree_view" model="ir.ui.view">
+            <field name="name">job.tree.view</field>
+            <field name="model">job</field>
+            <field name="arch" type="xml">
+                <tree string="Job">
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="job_form_view" model="ir.ui.view">
+            <field name="name">job.form.view</field>
+            <field name="model">job</field>
+            <field name="arch" type="xml">
+                <form string="Job">
+                    <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="job_action" model="ir.actions.act_window">
+            <field name="name">Job</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">job</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="job_tree_view"/>
+        </record>
+
+        <menuitem id="job_menu" name="Job" />
+        <menuitem id="job_menu_1" name="Job" parent="job_menu" action="job_action"/>
+
+
+<!--        level     -->
+                <record id="level_tree_view" model="ir.ui.view">
+            <field name="name">level.tree.view</field>
+            <field name="model">level</field>
+            <field name="arch" type="xml">
+                <tree string="Level">
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="level_form_view" model="ir.ui.view">
+            <field name="name">level.form.view</field>
+            <field name="model">level</field>
+            <field name="arch" type="xml">
+                <form string="Level">
+                    <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="level_action" model="ir.actions.act_window">
+            <field name="name">Level</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="level_tree_view"/>
+        </record>
+
+        <menuitem id="level_menu" name="Level" />
+        <menuitem id="level_menu_1" name="Level" parent="level_menu" action="level_action"/>
+
+<!--        ================      -->
+
+        <record id="work_experiences_tree_view" model="ir.ui.view">
+            <field name="name">work.experiences.tree.view</field>
+            <field name="model">work.experiences</field>
+            <field name="arch" type="xml">
+                <tree string="Work Experiences">
+                    <field name="from_date" />
+                    <field name="to_date" />
+                    <field name="company" />
+                    <field name="role_id" />
+                    <field name="job_id" />
+                    <field name="level_id" />
+                    <field name="reference" />
+                    <field name="employee_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="work_experiences_form_view" model="ir.ui.view">
+            <field name="name">work.experiences.form.view</field>
+            <field name="model">work.experiences</field>
+            <field name="arch" type="xml">
+                <form string="Level">
+                    <sheet>
+                            <group>
+                                <field name="from_date" />
+                                <field name="to_date" />
+                                <field name="company" />
+                                <field name="role_id" />
+                                <field name="job_id" />
+                                <field name="level_id" />
+                                <field name="reference" />
+                                <field name="employee_id" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="work_experiences_action" model="ir.actions.act_window">
+            <field name="name">work_experiences</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">work.experiences</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="work_experiences_tree_view"/>
+        </record>
+
+        <menuitem id="work_experiences" name="Work Experiences" />
+        <menuitem id="work_experiences_1" name="Work Experience" parent="work_experiences" action="work_experiences_action"/>
+    </data>
+</odoo>

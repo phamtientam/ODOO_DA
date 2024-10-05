@@ -1,0 +1,7 @@
+id,sequence,is_favorite,display_name,partner_id,date_start,date,user_id,last_update_status
+2,10,True,Benjamin,"(14, 'Benjamin Japan')",2024-09-01,2024-11-30,"(2, 'Administrator')",on_track
+3,10,True,Cippo,"(14, 'Benjamin Japan')",2024-09-01,2024-11-30,"(2, 'Administrator')",on_hold
+1,10,True,Development Adfile,"(13, 'Adfile Japan')",2024-09-03,2024-10-31,"(2, 'Administrator')",on_track
+5,10,True,OPMS,"(14, 'Benjamin Japan')",2024-03-14,2024-10-31,"(2, 'Administrator')",on_track
+4,10,True,RECO,"(13, 'Adfile Japan')",2024-11-30,2024-12-28,"(2, 'Administrator')",at_risk
+6,10,True,Ranking,"(13, 'Adfile Japan')",2024-11-30,2024-12-28,"(2, 'Administrator')",at_risk

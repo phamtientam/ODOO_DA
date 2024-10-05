@@ -1,0 +1,7 @@
+id,sequence,name,department_id,application_count,no_of_recruitment
+4,10,BA,False,0,1
+6,10,Comtor,False,0,1
+2,10,Dev,False,0,1
+3,10,Project Manager,False,0,1
+5,10,QA,False,0,1
+1,10,Tester,False,0,1

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="employee_info_tree_view" model="ir.ui.view">
+            <field name="name">employee.info.tree.view</field>
+            <field name="model">employee.info</field>
+            <field name="arch" type="xml">
+                <tree string="Employee">
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="address" />
+                    <field name="email" />
+                    <field name="company" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="customer_info_tree_view" model="ir.ui.view">
+            <field name="name">customer.info.tree.view</field>
+            <field name="model">customer.info</field>
+            <field name="arch" type="xml">
+                <tree string="Employee">
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="address" />
+                    <field name="phone" />
+                    <field name="enterprise" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="employee_info_form_view" model="ir.ui.view">
+            <field name="name">employee.info.form.view</field>
+            <field name="model">employee.info</field>
+            <field name="arch" type="xml">
+                <form string="Employee">
+                    <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="age" />
+                                <field name="address" />
+                                <field name="email" />
+                                <field name="company" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customer_info_form_view" model="ir.ui.view">
+            <field name="name">customer.info.form.view</field>
+            <field name="model">customer.info</field>
+            <field name="arch" type="xml">
+                <form string="Customer">
+                    <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="age" />
+                                <field name="address" />
+                                <field name="phone" />
+                                <field name="enterprise" />
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_info_action" model="ir.actions.act_window">
+            <field name="name">Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.info</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="employee_info_tree_view"/>
+        </record>
+
+        <record id="customer_info_action" model="ir.actions.act_window">
+            <field name="name">Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customer.info</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="customer_info_tree_view"/>
+        </record>
+
+
+        <menuitem id="employee_info_menu" name="Employee" />
+        <menuitem id="employee_info_menu_1" name="Employee" parent="employee_info_menu" action="employee_info_action"/>
+
+        <menuitem id="customer_info_menu" name="Customer" />
+        <menuitem id="customer_info_menu_1" name="Customer" parent="customer_info_menu" action="customer_info_action"/>
+    </data>
+</odoo>

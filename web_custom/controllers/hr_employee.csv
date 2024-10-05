@@ -1,0 +1,10 @@
+id,name,work_phone,work_email,activity_ids,activity_date_deadline,department_name,job_name,parent_id,birthday,marital,level_name
+1,Administrator,False,admin@example.com,[],False,SDC1,False,"(2, 'Phạm Tiến Tâm')",2002-06-19,single,False
+5,Hoàng Quốc Việt,0342342334,vietquochoang@gmail.com,[],False,SDC3,Project Manager,"(1, 'Administrator')",2000-06-20,married,Junior
+4,Khuất Hữu Đạt,234423424,tamkem5112002@gmail.com,[],False,Sales,False,"(3, 'Nguyễn Duy Dương')",2000-03-31,single,Middle
+3,Nguyễn Duy Dương,02342342342,duyduong@gmail.com,[],False,SDC3,False,"(4, 'Khuất Hữu Đạt')",1988-08-17,married,Technical
+7,Nguyễn Thu Hồng,034534534,mailinh@gmail.com,[],False,SDC1,Tester,"(1, 'Administrator')",1992-07-16,single,Fresher
+8,Nguyễn Xuân Mạnh,03454534534,xuanmanh@gmail.com,[],False,SDC3,Dev,"(1, 'Administrator')",2024-09-24,single,Senior
+9,Nguyễn Đức Lâm,0876454543,duclam@gmail.com,[],False,NES,Dev,"(1, 'Administrator')",1889-09-30,single,Middle
+6,Phạm Thị Thanh Tình,0397127215,thanhtinh@gmail.com,[],False,NES,False,"(1, 'Administrator')",2005-07-31,single,Middle
+2,Phạm Tiến Tâm,False,tamkem5112002@gmail.com,[],False,SDC1,False,False,1996-10-05,single,Technical

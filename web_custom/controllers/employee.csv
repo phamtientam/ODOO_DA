@@ -1,0 +1,5 @@
+id,name,work_phone,work_email,activity_ids,activity_date_deadline,department_id,job_id,parent_id,birthday,marital
+1,Administrator,False,admin@example.com,[],False,"(3, 'SDC1')",False,"(2, 'Phạm Tiến Tâm')",2002-06-19,single
+4,Khuất Hữu Đạt,234423424,tamkem5112002@gmail.com,[],False,"(2, 'Sales')",False,"(3, 'Nguyễn Duy Dương')",2000-03-31,single
+3,Nguyễn Duy Dương,02342342342,duyduong@gmail.com,[],False,"(4, 'SDC3')",False,"(4, 'Khuất Hữu Đạt')",1988-08-17,married
+2,Phạm Tiến Tâm,False,tamkem5112002@gmail.com,[],False,"(3, 'SDC1')",False,False,1996-10-05,single
